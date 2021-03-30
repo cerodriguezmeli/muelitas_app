@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "e8e05f98-6a4c-4213-a02b-829b5ee184e4",
+		"name": "muelitas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/patients",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Celeste\",\n    \"lastName\" : \"Rodriguez\",\n    \"address\" : \"Rivadavia 123\",\n    \"dni\" : \"123453\",\n    \"birthDate\" : \"1997-07-22\",\n    \"phone\" : \"15555555\",\n    \"email\" : \"pepito@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/createPatient",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"createPatient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get patient por id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/getPatient/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getPatient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/deletePatient/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deletePatient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/editPatient/2?name=Juan&lastName=Perez",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"editPatient",
+						"2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Juan"
+						},
+						{
+							"key": "lastName",
+							"value": "Perez"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
