@@ -22,9 +22,8 @@ public class Dentist {
     private String lastName;
     private String address;
     private String dni;
-     @Column(name = "birth_date")
-    //@Temporal(TemporalType.TIME)
-       private Date birthDate;
+    @Column(name = "birth_date")
+    private Date birthDate;
     private String phone;
     private String email;
     @Column(name = "code_mp")

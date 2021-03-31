@@ -19,8 +19,8 @@ public class Patient {
     private String lastName;
     private String address;
     private String dni;
-     @Column(name = "birth_date")
-      private Date birthDate;
+    @Column(name = "birth_date")
+    private Date birthDate;
     private String phone;
     private String email;
 

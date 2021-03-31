@@ -16,7 +16,8 @@ public class Turn {
     private long id;
     private Date day;
 
-    @OneToOne(mappedBy = "turn")
+    @ManyToOne
+    @JoinColumn(name = "diary_id")
     private Diary diary;
 
     @ManyToOne
@@ -25,6 +26,6 @@ public class Turn {
 
     @ManyToOne
     @JoinColumn(name = "patients_id", nullable = false)
-    private Patient patients;
+    private Patient patient;
 
 }

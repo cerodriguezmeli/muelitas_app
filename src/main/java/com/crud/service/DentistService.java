@@ -1,7 +1,7 @@
 package com.crud.service;
 
-import com.crud.models.Patient;
-import com.crud.repository.PatientRepository;
+import com.crud.models.Dentist;
+import com.crud.repository.DentistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,14 +9,14 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class PatientServiceImpl implements PatientService {
+public class DentistService implements IDentistService {
 
-   @Autowired
-   private PatientRepository repo;
+    @Autowired
+    private DentistRepository repo;
 
     @Override
     @Transactional
-    public void save(Patient p) {
+    public void save(Dentist p) {
         repo.save(p);
     }
 
@@ -28,15 +28,13 @@ public class PatientServiceImpl implements PatientService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Patient> findAll() {
-        List<Patient> patientList = repo.findAll();
-        return patientList;
+    public List<Dentist> findAll() {
+        return repo.findAll();
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Patient findPatientByid(Long id) {
-        Patient patient = repo.findById(id).orElse(null);
-        return patient;
+    public Dentist findDentistByid(Long id) {
+        return repo.findById(id).orElse(null);
     }
 }
